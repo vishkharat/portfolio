@@ -1,0 +1,1172 @@
+/** 
+* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #272829;
+  background-color: #f9f9f9; /* added a light gray background */
+  transition: background-color 0.3s ease-in-out;
+}
+
+a {
+  color: #149ddd;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #37b3ed;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
+  background: rgba(20, 157, 221, 0.8); /* Semi-transparent background for a modern look */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 0 20px rgba(20, 157, 221, 0.7), inset 0 0 5px rgba(20, 157, 221, 0.5); /* Outer and inner glow */
+  border: 2px solid rgba(20, 157, 221, 0.5); /* Holographic border effect */
+  backdrop-filter: blur(8px); /* Glassmorphism effect */
+  transform: rotate(0deg) scale(1); /* Initial state */
+}
+
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+  z-index: 1;
+}
+
+.back-to-top:hover {
+  background: rgba(20, 157, 221, 1); /* Full neon color on hover */
+  box-shadow: 0 0 30px rgba(20, 157, 221, 0.9), inset 0 0 10px rgba(20, 157, 221, 0.6); /* Enhanced glow */
+  border: 2px solid rgba(20, 157, 221, 0.8); /* Brighter border on hover */
+  transform: rotate(360deg) scale(1.1); /* Rotates and enlarges on hover */
+  animation: shimmer 1.5s infinite; /* Shimmering effect */
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Keyframes for shimmering effect */
+@keyframes shimmer {
+  0% {
+    box-shadow: 0 0 20px rgba(20, 157, 221, 0.7), inset 0 0 5px rgba(20, 157, 221, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(20, 157, 221, 1), inset 0 0 10px rgba(20, 157, 221, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(20, 157, 221, 0.7), inset 0 0 5px rgba(20, 157, 221, 0.5);
+  }
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  transition: all 0.5s ease-in-out;
+  z-index: 9997;
+  padding: 20px;
+  background: #040b14; /* Keep the original dark color */
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slightly more pronounced shadow */
+}
+
+#header .profile img {
+  margin: 20px auto;
+  display: block;
+  width: 120px;
+  border: 6px solid #2c2f3f; /* Slightly thinner border */
+  border-radius: 50%; /* Ensure image is circular */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#header .profile img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* More subtle glow on hover */
+}
+
+#header .profile h1 {
+  font-size: 24px;
+  margin: 10px 0;
+  font-weight: 600;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+#header .profile h1 a,
+#header .profile h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#header .profile .social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#header .profile .social-links a {
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #212431;
+  color: #fff;
+  width: 36px; /* Slightly smaller size */
+  height: 36px; /* Match the width */
+  border-radius: 50%;
+  transition: all 0.3s;
+  margin: 0 4px; /* Less margin */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Softer shadow */
+}
+
+#header .profile .social-links a:hover {
+  background: #149ddd;
+  color: #fff;
+  transform: translateY(-4px); /* Subtle lift on hover */
+}
+
+#main {
+  margin-left: 300px;
+  transition: margin-left 0.5s ease-in-out;
+}
+
+.container,
+.container-fluid {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+@media (max-width: 1199px) {
+  #header {
+    left: -300px;
+  }
+
+  #main {
+    margin-left: 0;
+  }
+
+  .container,
+  .container-fluid {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Basic Styling for Navigation Menu */
+/* Basic Styling for Navigation Menu */
+/* Desktop Navigation */
+.nav-menu {
+  padding: 30px 0 0 0;
+}
+
+.nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu>ul>li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-menu a,
+.nav-menu a:focus {
+  display: flex;
+  align-items: center;
+  color: #a8a9b4;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.nav-menu a i,
+.nav-menu a:focus i {
+  font-size: 24px;
+  padding-right: 8px;
+  color: #6f7180;
+}
+
+.nav-menu a:hover,
+.nav-menu .active,
+.nav-menu .active:focus,
+.nav-menu li:hover>a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-menu a:hover i,
+.nav-menu .active i,
+.nav-menu .active:focus i,
+.nav-menu li:hover>a i {
+  color: #149ddd;
+}
+
+/* Mobile Navigation */
+.mobile-nav-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 9998;
+  border: 0;
+  font-size: 24px;
+  transition: all 0.4s;
+  outline: none !important;
+  background-color: #149ddd;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.mobile-nav-active {
+  overflow: hidden;
+}
+
+.mobile-nav-active #header {
+  left: 0;
+}
+
+/* Mobile Navigation */
+/* Mobile Navigation Toggle Button */
+/* Mobile Navigation Toggle Button */
+.mobile-nav-toggle {
+  position: fixed;
+  right: 20px; /* Slightly more distance from the edge */
+  top: 20px; /* Slightly more distance from the top */
+  z-index: 9998;
+  border: none;
+  font-size: 28px; /* Larger icon for better visibility */
+  background: linear-gradient(145deg, #00b4d8, #0077b6); /* Gradient background */
+  color: #fff;
+  width: 50px; /* Larger width */
+  height: 50px; /* Larger height */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  border-radius: 50%; /* Circular button */
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Hover and Active States */
+.mobile-nav-toggle:hover {
+  background: linear-gradient(145deg, #0077b6, #00b4d8); /* Reverse gradient on hover */
+  transform: scale(1.1); /* Slightly larger on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.mobile-nav-toggle:focus {
+  outline: none;
+}
+
+/* Bounce Effect on Click */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.mobile-nav-toggle:active {
+  animation: bounce 0.6s;
+}
+
+/* Icon Styling */
+.mobile-nav-toggle i {
+  font-size: 24px; /* Adjust size of the icon */
+}
+
+/* Mobile Navigation Active State */
+.mobile-nav-active {
+  overflow: hidden;
+}
+
+.mobile-nav-active #header {
+  left: 0;
+}
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/hero-bg.jpg") no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  perspective: 1px;
+  perspective-origin: 0 0;
+  transform-style: preserve-3d;
+}
+
+#hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.8); /* Minimal dark overlay */
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+
+#hero .hero-container {
+  position: relative;
+  z-index: 2;
+  min-width: 300px;
+  max-width: 800px;
+  padding: 0 20px;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7), 0 0 20px #00e6e6, 0 0 30px #00e6e6, 0 0 40px #00e6e6;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateZ(0);
+  will-change: transform;
+  transition: transform 0.3s ease-in-out, opacity 1.5s;
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+#hero h1::after {
+  content: '';
+  display: inline-block;
+  border-right: 2px solid;
+  margin-left: 5px;
+  animation: blink 0.75s step-end infinite;
+}
+
+#hero h1:hover {
+  transform: scale(1.05);
+}
+
+#hero p {
+  color: #fff;
+  margin-bottom: 50px;
+  font-size: 26px;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  animation: fadeIn 2s ease-out forwards 0.5s;
+}
+
+#hero p span {
+  color: #fff;
+  padding-bottom: 4px;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #149ddd;
+  transition: border-color 0.3s;
+}
+
+#hero p span:hover {
+  border-color: #fbc638;
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  #hero p {
+    font-size: 20px;
+  }
+}
+
+/* Keyframes for Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+@keyframes neon-glow {
+  from {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7), 0 0 20px #00e6e6, 0 0 30px #00e6e6, 0 0 40px #00e6e6;
+  }
+  to {
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.9), 0 0 30px #00e6e6, 0 0 40px #00e6e6, 0 0 50px #00e6e6;
+  }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background: #f5f8fd;
+}
+
+.section-title {
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #173b6c;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #149ddd;
+  bottom: 0;
+  left: 0;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about .content h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: #173b6c;
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.about .content ul strong {
+  margin-right: 10px;
+}
+
+.about .content ul i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #149ddd;
+  line-height: 0;
+}
+
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Facts
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Skills Section
+--------------------------------------------------------------*/
+.skills .progress {
+  height: 60px;
+  display: block;
+  background: none;
+  border-radius: 0;
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.skills .progress .skill {
+  padding: 0;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #050d18;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skills .progress .skill .val {
+  font-style: normal;
+  background: #050d18;
+  padding: 2px 10px;
+  border-radius: 15px;
+  color: #fff;
+}
+
+.skills .progress-bar-wrap {
+  background: #e0e5ec;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills .progress-bar {
+  width: 1px;
+  height: 10px;
+  transition: width 1.5s ease-in-out; /* Smooth animation */
+  background: linear-gradient(90deg, #149ddd, #10c9c3);
+  box-shadow: 0 0 10px rgba(20, 157, 221, 0.7), 0 0 20px rgba(20, 157, 221, 0.5); /* Neon glow effect */
+  border-radius: 5px;
+  position: relative;
+  animation: pulse 1.5s infinite;
+}
+
+.skills .progress-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 10px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+.skills .progress-bar:hover::after {
+  transform: translateX(-30%);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+}
+
+/*--------------------------------------------------------------
+# Resume
+--------------------------------------------------------------*/
+.resume .resume-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #050d18;
+}
+
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #1f5297;
+  position: relative;
+}
+
+.resume .resume-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #050d18;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+  font-size: 16px;
+  background: #e4edf9;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item ul {
+  padding-left: 20px;
+}
+
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+}
+
+.resume .resume-item:last-child {
+  padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #1f5297;
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
+}
+
+.portfolio #portfolio-flters {
+  padding: 0;
+  margin: 0 auto 35px auto;
+  list-style: none;
+  text-align: center;
+  background: #f0f4f8; /* Softer background color */
+  border-radius: 30px; /* Softer border radius */
+  padding: 5px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 20px; /* Rounded corners */
+  background: #e9ecef; /* Light background */
+}
+
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+  color: #fff;
+  background: #007bff; /* Vibrant blue color */
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); /* Glowing effect */
+}
+
+.portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
+}
+
+.portfolio .portfolio-wrap {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.portfolio .portfolio-wrap::before {
+  content: "";
+  background: rgba(0, 123, 255, 0.1); /* Light overlay */
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+
+.portfolio .portfolio-wrap .portfolio-links {
+  opacity: 0;
+  left: 0;
+  right: 0;
+  bottom: -60px;
+  z-index: 3;
+  position: absolute;
+  transition: all ease-in-out 0.3s;
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Space between icons */
+}
+
+.portfolio .portfolio-wrap .portfolio-links a {
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  background: rgba(0, 123, 255, 0.8); /* Slightly darker overlay */
+  transition: 0.3s;
+  width: 40px; /* Icon container size */
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%; /* Circular icons */
+}
+
+.portfolio .portfolio-wrap .portfolio-links a:hover {
+  background: rgba(0, 123, 255, 1); /* Fully opaque on hover */
+}
+
+.portfolio .portfolio-wrap:hover::before {
+  opacity: 1;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-links {
+  opacity: 1;
+  bottom: 20px;
+}
+
+.portfolio .portfolio-wrap img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px; /* Optional, matches the container */
+}
+
+/*--------------------------------------------------------------
+# Portfolio Details
+--------------------------------------------------------------*/
+.portfolio-details {
+  padding-top: 40px;
+}
+
+.portfolio-details .portfolio-details-slider img {
+  width: 100%;
+  height: 300px; /* Slightly taller for detail view */
+  object-fit: cover;
+  border-radius: 15px; /* Optional */
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #007bff; /* Matches theme color */
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #007bff; /* Matches active filter color */
+}
+
+.portfolio-details .portfolio-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.05);
+  border-radius: 15px; /* Rounded corners */
+  background: #f8f9fa; /* Light background */
+}
+
+.portfolio-details .portfolio-info h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.portfolio-details .portfolio-info ul li+li {
+  margin-top: 10px;
+}
+
+.portfolio-details .portfolio-description {
+  padding-top: 30px;
+}
+
+.portfolio-details .portfolio-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-description p {
+  padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.services .icon-box {
+  margin-bottom: 20px;
+}
+
+.services .icon {
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  background: #149ddd;
+  border-radius: 50%;
+  transition: 0.5s;
+  border: 1px solid #149ddd;
+}
+
+.services .icon i {
+  color: #fff;
+  font-size: 24px;
+  line-height: 0;
+}
+
+.services .icon-box:hover .icon {
+  background: #fff;
+}
+
+.services .icon-box:hover .icon i {
+  color: #149ddd;
+}
+
+.services .title {
+  margin-left: 80px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.services .title a {
+  color: #343a40;
+}
+
+.services .title a:hover {
+  color: #149ddd;
+}
+
+.services .description {
+  margin-left: 80px;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+/*--------------------------------------------------------------
+# Testimonials
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+/* Contact Form CSS */
+
+.contact {
+  padding-bottom: 130px;
+  background: #f9f9f9; /* added a light gray background */
+}
+
+.contact .info {
+  padding: 30px;
+  background: #fff;
+  width: 100%;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 10px; /* added a subtle border radius */
+}
+
+.contact .info i {
+  font-size: 20px;
+  color: #f34fae;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: #3be9d8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* added a small box shadow */
+}
+
+.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #050d18;
+  text-transform: uppercase; /* made headings uppercase */
+}
+
+.contact .info p {
+  padding: 0 0 10px 60px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #173b6c;
+  font-family: 'Open Sans', sans-serif; /* changed font family for better readability */
+}
+
+.contact .info .email p {
+  padding-top: 5px;
+}
+
+.contact .info .social-links {
+  padding-left: 60px;
+}
+
+.contact .info .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+  margin-right: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* added a small box shadow */
+}
+
+.contact .info .social-links a:hover {
+  background: #dc2d8a;
+  color: #fff;
+  transform: translateY(-5px); /* added a subtle hover effect */
+}
+
+.contact .info .email:hover i,
+.contact .info .address:hover i,
+.contact .info .phone:hover i {
+  background: #149ddd;
+  color: #fff;
+}
+
+/* Form Styles */
+
+form {
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  display: none; /* Hidden by default */
+}
+
+.submit-button {
+  background: #1d72b8;
+  color: #fff;
+  border: 2px solid #1d72b8;
+  border-radius: 50px;
+  padding: 8px 50px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s;
+}
+
+.submit-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: 0;
+  opacity: 0.4;
+}
+
+.submit-button:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+}
+
+.submit-button:hover {
+  background: #0e4c92;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0.2);
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  padding: 15px;
+  color: #f4f6fd;
+  font-size: 14px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  z-index: 9999;
+  background: #040b14;
+}
+
+#footer .copyright {
+  text-align: center;
+}
+
+#footer .credits {
+  padding-top: 5px;
+  text-align: center;
+  font-size: 13px;
+  color: #eaebf0;
+}
+
+@media (max-width: 1199px) {
+  #footer {
+    position: static;
+    width: auto;
+    padding-right: 20px 15px;
+  }
+}
